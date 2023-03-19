@@ -172,38 +172,34 @@ let data = {
     ]
   };
 
-let eventos = data.events
-let currentDate = new Date(data.currentDate)
-
-let card = document.getElementById("card-template");
-
-eventos.map ((x) => {
-  card.innerHTML += `
-  <div class="col">
-    <div class="card">
-      <img src="${x.image}" class="card-img-top" alt="${x.name}">
-      <div class="card-body">
-        <h5 class="card-title">"${x.name}"</h5>
-        <p class="card-text">"${x.description}".</p>
-        <p class="card-text">"Precio: ${x.price}".</p>
-        <a href="./Details.html" class="btn btn-primary">Ver más..</a>
-      </div>
-    </div>
-  </div>`;
-})
-
-let categorias = [];
-
-eventos.forEach(cat =>{
-  if (!categorias.includes(cat.category)){
-    categorias.push(cat.category)
+  let event = data.events
+  let currentDate = new Date(data.currentDate)
+  let upcomingEvents = [];  
+  let pastEvents = [];
+  
+  for (let i = 0; i < data.events.length; i++) {
+      let event = data.events[i];
+      let Eventdate = new Date(event.date);
+  
+      if (Eventdate > new Date(data.currentDate)) {
+          upcomingEvents.push(event);
+      } else {
+          pastEvents.push(event);
+      }
   }
-});
-
-let div = document.querySelector("search-filter")
-let htmlcategorias = "";
-for (let category of categorias){
-  htmlcategorias +=  `<input type="checkbox" name="category" id="${category}" value="${category}" onclick="filterByCats()">
-  <label for="${category}">${category}</label>`;
-}
-div.innerHTML = htmlcategorias
+  let card = document.getElementById("upcoming-events");
+  
+  upcomingEvents.map ((x) => {
+    card.innerHTML += `
+    <div class="col">
+      <div class="card">
+        <img src="${x.image}" class="card-img-top" alt="${x.name}">
+        <div class="card-body">
+          <h5 class="card-title">"${x.name}"</h5>
+          <p class="card-text">"${x.description}".</p>
+          <p class="card-text">"Precio: ${x.price}".</p>
+          <a href="#" class="btn btn-primary">Ver más..</a>
+        </div>
+      </div>
+    </div>`;
+  })
