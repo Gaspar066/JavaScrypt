@@ -51,9 +51,10 @@ table{
 figure{
     margin: 10vh 20vh 10vh 20vh;
 }
-#card-template{
+#card-container{
     margin-left: 32vh;
     margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 #past-events{
     margin-left: 32vh;
