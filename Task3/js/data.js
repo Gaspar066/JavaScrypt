@@ -171,38 +171,3 @@ let data = {
       }
     ]
   };
-
-let eventos = data.events
-let currentDate = new Date(data.currentDate)
-
-let card = document.getElementById("card-template");
-
-eventos.map ((x) => {
-  card.innerHTML += `
-  <div class="col">
-    <div class="card">
-      <img src="${x.image}" class="card-img-top" alt="${x.name}">
-      <div class="card-body">
-        <h5 class="card-title">"${x.name}"</h5>
-        <p class="card-text">"${x.description}".</p>
-        <p class="card-text">"Precio: ${x.price}".</p>
-        <a href="./Details.html" class="btn btn-primary">Ver más..</a>
-      </div>
-    </div>
-  </div>`;
-})
-
-function creatCategory(array, divForm) {
-  array.forEach((cat) => {
-    let containerForm = document.getElementById("category-container");
-    let categorias = document.createElement("div");
-    categorias.className = "form-check";
-    categorias.innerHTML = `<label class="form-check-label cat-buttons" for="${cat}">
-      ${cat}
-      <input name="${cat}" class="form-check-input" type="checkbox" value="${cat}"
-          id="${cat}">
-      </label>`;
-    containerForm.appendChild(categorias);
-    return cat;
-  });
-}
