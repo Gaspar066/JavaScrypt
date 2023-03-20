@@ -192,18 +192,17 @@ eventos.map ((x) => {
   </div>`;
 })
 
-let categorias = [];
-
-eventos.forEach(cat =>{
-  if (!categorias.includes(cat.category)){
-    categorias.push(cat.category)
-  }
-});
-
-let div = document.querySelector("search-filter")
-let htmlcategorias = "";
-for (let category of categorias){
-  htmlcategorias +=  `<input type="checkbox" name="category" id="${category}" value="${category}" onclick="filterByCats()">
-  <label for="${category}">${category}</label>`;
+function creatCategory(array, divForm) {
+  array.forEach((cat) => {
+    let containerForm = document.getElementById("category-container");
+    let categorias = document.createElement("div");
+    categorias.className = "form-check";
+    categorias.innerHTML = `<label class="form-check-label cat-buttons" for="${cat}">
+      ${cat}
+      <input name="${cat}" class="form-check-input" type="checkbox" value="${cat}"
+          id="${cat}">
+      </label>`;
+    containerForm.appendChild(categorias);
+    return cat;
+  });
 }
-div.innerHTML = htmlcategorias
