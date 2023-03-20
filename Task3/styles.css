@@ -19,7 +19,7 @@ a:hover{
 #pointer{
     background-color: yellow;
 }
-#elements{
+#section{
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -51,16 +51,18 @@ table{
 figure{
     margin: 10vh 20vh 10vh 20vh;
 }
-#card-container{
-    margin-left: 32vh;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+
+label {
+    margin-left: 0.3rem;
 }
-#past-events{
-    margin-left: 32vh;
-    margin-top: 5vh;
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: center;
 }
-#upcoming-events{
-    margin-left: 32vh;
-    margin-top: 5vh;
+#header-section{
+    display: flex;
+    flex-direction: row;
 }
