@@ -191,3 +191,19 @@ eventos.map ((x) => {
     </div>
   </div>`;
 })
+
+let categorias = [];
+
+eventos.forEach(cat =>{
+  if (!categorias.includes(cat.category)){
+    categorias.push(cat.category)
+  }
+});
+
+let div = document.querySelector("search-filter")
+let htmlcategorias = "";
+for (let category of categorias){
+  htmlcategorias +=  `<input type="checkbox" name="category" id="${category}" value="${category}" onclick="filterByCats()">
+  <label for="${category}">${category}</label>`;
+}
+div.innerHTML = htmlcategorias
