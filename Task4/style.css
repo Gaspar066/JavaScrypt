@@ -1,0 +1,251 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#banner {
+    background-color: rgba(18, 23, 71, 0.705);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+nav>a{
+    text-decoration: #d90368;
+    color: #d90368;
+    margin: 0vh 2.5vh 0vh 2.5vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+}
+a:hover{
+    background-color: #FFFFFF44;
+}
+#pointer{
+    background-color: yellow;
+}
+#section{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0vh 5vh 0vh 5vh;
+}
+#cheap-Carousell{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+h1{
+    font-size: 300%;
+}
+footer{
+    text-decoration: #d90368;
+    color: #d90368;
+    background-color: #585b7d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 0%;
+    margin: 0vh 5vh 0vh 5vh;
+}
+#category div{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;   
+    padding: 1rem;
+    margin: 3rem;
+    width: 18rem;
+}
+
+#submit {
+    display: flex;
+    justify-content: end;
+}
+
+#details {
+    width: 40rem;
+    height: 20rem;
+    border: none;
+}
+
+#textoDetails {
+    background-color: bisque;
+    font-size: x-large;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    height: 30rem;
+    width: 50rem;
+    margin: 5rem 0 5rem 22rem;
+}
+
+#Detailscard {
+    background-color: bisque;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    height: 28rem;
+    width: 55rem;
+    margin: 5rem  0 5rem 22rem;
+}
+#Detailscard>img{
+    width: 50%;
+    height: 65%;
+}
+#textoDetails{
+    height: 212px;
+    width: 212px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1rem;
+}
+.section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;  
+}
+#contacto{
+    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    width:80rem;
+    padding-left: 10rem;
+    margin-bottom: 10%;
+    margin-left: 10%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px){
+
+nav a{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav a{
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+
+}
+#logo {
+    width: 11rem;
+    height: 4rem;
+}
+#banner{
+    width: fit-content;
+    width: 100%;
+}
+
+#category>div{
+    display: flex;
+    flex-wrap: wrap;
+}
+#cheap-Carousell{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding-right: 20%;
+}
+#cheap-Carousell img{
+    width: 1rem;
+
+}
+#form{
+    width: 60%;
+}
+.section div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+footer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#Detailscard{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    width: 10rem;
+}
+
+
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+#banner{
+    width: 100%;
+}
+
+#categories{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#form{
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 16rem;
+
+}
+
+#Detailscard{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+}
+
